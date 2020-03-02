@@ -5,5 +5,5 @@ from .views import dashboard
 app_name = 'asapay'
 
 urlpatterns = [
-    path('dashboard', dashboard, name='dashboard')
+    path('', dashboard, name='dashboard')
 ]
