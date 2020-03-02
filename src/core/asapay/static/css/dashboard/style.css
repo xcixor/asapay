@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .main {
@@ -22,7 +22,7 @@ body {
 
 .card {
     width: 100%;
-    /* overflow-y: scroll; */
+    padding: 50px 0;
 }
 
 .detail-titles, .details {
@@ -42,7 +42,7 @@ body {
 
 .user-details {
     padding-top: 20px;
-    height: 40vh;
+    height: 70vh;
     overflow-y: scroll;
 }
 
@@ -59,7 +59,15 @@ body {
     text-align: center;
 }
 
-.card-title {
+#users-title {
     margin: 0;
-    padding-left: 320px;
+    padding-left: 16.5vw;
+}
+
+.payment-title {
+    padding-left: 2vw;
+}
+
+.users{
+    /* background-color: #58AF50 !important; */
 }

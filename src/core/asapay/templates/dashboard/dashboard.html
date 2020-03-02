@@ -5,22 +5,24 @@
 <link rel="stylesheet" href="{% static 'css/dashboard/style.css' %}">
 {% endblock %}
 {% block content %}
+{% load dashboard_extras %}
 <div class="row main">
     <div class="row users">
-        <div class="card">
-        <h6 class="card-title">Users: {{ total_users.0.0 }}</h6>
+        <div class="card users">
+            <div class="card-title">
+                <span id="users-title">
+                    Users: {{ total_users.0.0 }}
+                </span>
+            </div>
             <div class="detail-titles">
                 <h5>Id</h5>
-                <!-- <h5>Name</h5> -->
                 <h5>Phone Number</h5>
-                <!-- <h5>Gender</h5> -->
                 <h5>Status</h5>
             </div>
             <div class="user-details">
                 {% for user in users %}
                 <div class="details">
                     <p id="id">{{ user.0 }}</p>
-                    <!-- <p id="name">{{ user.3 }}</p> -->
                     <p id="email">{{ user.4 }}</p>
                     {% if user.13 >= 1 %}
                     <p id="status">Active</p>
@@ -29,10 +31,72 @@
                     {% endif %}
                 </div>
                 {% endfor %}
-                <h5 id="title">Total Users: {{user.legth}}</h5>
             </div>
         </div>
     </div>
-    <div class="payments"></div>
+    <div class="payments">
+        <div class="row">
+            <div class="col m6 l6 s12">
+                <div class="card airtime">
+                    <div class="card-title">
+                        <span class="payment-title">
+                            Airtime Purchases: {{ total_airtime_purchases.0.0 }}
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="detail-titles">
+                                <h5>Customer</h5>
+                                <h5>Amount</h5>
+                                <h5>Date</h5>
+                                <h5>Status</h5>
+                            </div>
+                            <div class="user-details">
+                                {% for purchase in airtime_purchases %}
+                                <div class="details">
+                                    <p id="id">{{ purchase.1 }}</p>
+                                    <p id="amount">{{ purchase.2 }}</p>
+                                    <p id="date">{{ purchase.3 }}</p>
+                                    <p id="status">{{ purchase.6|check_payment_status }}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col m6 l6 s12">
+                <div class="card kplc">
+                    <div class="card-title">
+                        <span class="payment-title">
+                            KPLC Purchases: {{ total_kplc_purchases.0.0 }}
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="detail-titles">
+                                <h5>Customer</h5>
+                                <h5>Amount</h5>
+                                <h5>Date</h5>
+                                <h5>Status</h5>
+                            </div>
+                            <div class="user-details">
+                                {% for purchase in kplc_purchases %}
+                                <div class="details">
+                                    <p id="id">{{ purchase.1 }}</p>
+                                    <p id="amount">{{ purchase.2 }}</p>
+                                    <p id="date">{{ purchase.3 }}</p>
+                                    <p id="status">{{ purchase.6|check_payment_status }}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </div>
 {% endblock %}
