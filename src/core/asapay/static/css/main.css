@@ -1,0 +1,21 @@
+nav {
+    background-color: #E6260E;
+}
+
+@media only screen and (min-width : 992px) {
+    .invesible-top {
+      top: 65px;
+    }
+}
+
+/* nav a.sidenav-trigger {
+    display: block !important;
+} */
+
+.background {
+    background-color: whitesmoke;
+}
+
+a .fas {
+    color: #E6260E;
+}
