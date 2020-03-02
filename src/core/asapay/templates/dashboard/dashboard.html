@@ -7,8 +7,8 @@
 {% block content %}
 {% load dashboard_extras %}
 <div class="row main">
-    <div class="row users">
-        <div class="card users">
+    <div class="row users" id="users">
+        <div class="card users-card">
             <div class="card-title">
                 <span id="users-title">
                     Users: {{ total_users.0.0 }}
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="payments">
+    <div class="payments" id="payments">
         <div class="row">
             <div class="col m6 l6 s12">
                 <div class="card airtime">

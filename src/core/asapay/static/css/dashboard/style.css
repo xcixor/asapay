@@ -1,7 +1,6 @@
 body {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
 }
 
 .main {
@@ -10,7 +9,7 @@ body {
     flex-grow: 1;
     justify-content: space-evenly;
     padding-left: 300px;
-    padding-top: 50px;
+    padding-top: 10px;
 }
 
 .users, .payments {
@@ -22,7 +21,11 @@ body {
 
 .card {
     width: 100%;
-    padding: 50px 0;
+    margin-bottom: 0;
+}
+
+.users-card {
+    background-color: #58AF50;
 }
 
 .detail-titles, .details {
@@ -36,12 +39,11 @@ body {
 }
 
 .detail-titles, .card-title {
-    background-color: #333366;
     color: white;
 }
 
 .user-details {
-    padding-top: 20px;
+    padding: 20px 0;
     height: 70vh;
     overflow-y: scroll;
 }
@@ -49,10 +51,6 @@ body {
 .detail-titles h5, .details p{
     width: 10vw;
     text-align: center;
-}
-
-.details:nth-child(odd){
-    background-color: #F8F8F8;
 }
 
 #title {
@@ -68,6 +66,10 @@ body {
     padding-left: 2vw;
 }
 
-.users{
-    /* background-color: #58AF50 !important; */
+.airtime {
+    background-color: #499688;
+}
+
+.kplc {
+    background-color: #3A796B;
 }
