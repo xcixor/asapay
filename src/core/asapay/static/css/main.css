@@ -1,5 +1,10 @@
 nav {
-    background-color: #E6260E;
+    background-color: #0D0000;
+}
+
+.nav-wrapper {
+    height: 50px;
+
 }
 
 @media only screen and (min-width : 992px) {
@@ -17,5 +22,5 @@ nav {
 }
 
 a .fas {
-    color: #E6260E;
+    color: #0D0000;
 }

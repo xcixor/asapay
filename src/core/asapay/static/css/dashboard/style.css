@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding-left: 300px;
+    padding-top: 50px;
+}
+
+.users, .payments {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+    width: 80vw;
+}
+
+.card {
+    width: 100%;
+    /* overflow-y: scroll; */
+}
+
+.detail-titles, .details {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.detail-titles {
+    border-bottom: 0.05em solid #E8E8E8;
+    padding-right: 15px;
+}
+
+.detail-titles, .card-title {
+    background-color: #333366;
+    color: white;
+}
+
+.user-details {
+    padding-top: 20px;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.detail-titles h5, .details p{
+    width: 10vw;
+    text-align: center;
+}
+
+.details:nth-child(odd){
+    background-color: #F8F8F8;
+}
+
+#title {
+    text-align: center;
+}
+
+.card-title {
+    margin: 0;
+    padding-left: 320px;
+}
