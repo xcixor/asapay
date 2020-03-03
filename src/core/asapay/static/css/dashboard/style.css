@@ -8,7 +8,6 @@ body {
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-evenly;
-    padding-left: 300px;
     padding-top: 10px;
 }
 
@@ -72,4 +71,61 @@ body {
 
 .kplc {
     background-color: #3A796B;
+}
+
+.user-details {
+    --scrollbarBG: rgba(0,0,0,0);
+    --thumbBG: #E638b3;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.user-details::-webkit-scrollbar {
+    width: 11px;
+}
+.user-details::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+.user-details::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+.user-details::-webkit-scrollbar-thumb:hover {
+    background: #ce530f;
+    cursor: pointer;
+}
+
+.user-details::-webkit-scrollbar {
+    cursor:pointer;
+}
+
+@media only screen and (min-width : 992px) {
+    .main {
+        padding-left: 300px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .details {
+        justify-content: space-evenly;
+    }
+
+    .details p, .detail-titles h5 {
+        width: unset;
+    }
+
+    .row .col {
+        float: unset;
+    }
+
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+
+    .users, .payments {
+        width: 100%;
+    }
 }

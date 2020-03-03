@@ -1,3 +1,4 @@
+
 nav {
     background-color: #0D0000;
 }
@@ -12,10 +13,6 @@ nav {
       top: 65px;
     }
 }
-
-/* nav a.sidenav-trigger {
-    display: block !important;
-} */
 
 .background {
     background-color: whitesmoke;
