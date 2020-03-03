@@ -3,3 +3,8 @@
 .env
 *.sql*
 settings.json
+*variables.json*
+*account.json*
+*terraform.tfvars*
+*.terraform*
+*infrastructure*
