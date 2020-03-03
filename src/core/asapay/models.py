@@ -35,7 +35,7 @@ def get_airtime_purchases():
         tuple -- list of all airtime purchases
     """
     with connection.cursor() as cursor:
-        query = "SELECT * FROM paymentDetails WHERE serviceID = %s" % 2
+        query = "SELECT * FROM paymentDetails WHERE serviceID = %s ORDER BY dateCreated DESC" % 2
         cursor.execute(query)
         payments = cursor.fetchall()
     return payments
@@ -48,7 +48,7 @@ def get_kplc_purchases():
         tuple -- list of all airtime purchases
     """
     with connection.cursor() as cursor:
-        query = "SELECT * FROM paymentDetails WHERE serviceID = %s" % 1
+        query = "SELECT * FROM paymentDetails WHERE serviceID = %s ORDER BY dateCreated DESC" % 1
         cursor.execute(query)
         payments = cursor.fetchall()
     return payments

@@ -8,29 +8,31 @@
 {% load dashboard_extras %}
 <div class="row main">
     <div class="row users" id="users">
-        <div class="card users-card">
-            <div class="card-title">
-                <span id="users-title">
-                    Users: {{ total_users.0.0 }}
-                </span>
-            </div>
-            <div class="detail-titles">
-                <h5>Id</h5>
-                <h5>Phone Number</h5>
-                <h5>Status</h5>
-            </div>
-            <div class="user-details">
-                {% for user in users %}
-                <div class="details">
-                    <p id="id">{{ user.0 }}</p>
-                    <p id="email">{{ user.4 }}</p>
-                    {% if user.13 >= 1 %}
-                    <p id="status">Active</p>
-                    {% else %}
-                    <p id="status">Inactive</p>
-                    {% endif %}
+        <div class="col s12">
+            <div class="card users-card">
+                <div class="card-title">
+                    <span id="users-title">
+                        Users: {{ total_users.0.0 }}
+                    </span>
                 </div>
-                {% endfor %}
+                <div class="detail-titles">
+                    <h5>Id</h5>
+                    <h5>Phone Number</h5>
+                    <h5>Status</h5>
+                </div>
+                <div class="user-details">
+                    {% for user in users %}
+                    <div class="details">
+                        <p id="id">{{ user.0 }}</p>
+                        <p id="email">{{ user.4 }}</p>
+                        {% if user.13 >= 1 %}
+                        <p id="status">Active</p>
+                        {% else %}
+                        <p id="status">Inactive</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
