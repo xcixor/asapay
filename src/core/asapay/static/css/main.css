@@ -22,7 +22,8 @@ nav {
 }
 
 a .fas {
-    /* color: #0D0000; */
+    display: flex;
+    justify-content: center;
 }
 
 .background img{
