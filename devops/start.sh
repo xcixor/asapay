@@ -25,6 +25,7 @@ get_required_variables () {
     export SERVICE_ACCOUNT="$(get_var "gs_credentials")"
     export DUMP_FILE="$(get_var "dump_file")"
     export GOOGLE_APPLICATION_CREDENTIALS="/usr/local/gs-account/account.json"
+    export STATIC_ROOT="/var/www/html/static"
 }
 
 start_app () {
