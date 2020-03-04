@@ -23,6 +23,7 @@ get_required_variables () {
     export GITHUB_BRANCH="$(get_var "github_branch")"
     export NGINX_SERVER_NAME="${APPLICATION_HOST}"
     export SERVICE_ACCOUNT="$(get_var "gs_credentials")"
+    export DUMP_FILE="$(get_var "dump_file")"
     export GOOGLE_APPLICATION_CREDENTIALS="/usr/local/gs-account/account.json"
 }
 
