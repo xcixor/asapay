@@ -9,6 +9,7 @@ verify_ssl = true
 django = "==3.0.3"
 mysqlclient = "*"
 gunicorn = "*"
+django-forgiving-collectstatic = "*"
 
 [requires]
 python_version = "3.7"
