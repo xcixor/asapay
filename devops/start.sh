@@ -14,9 +14,9 @@ get_var() {
 get_required_variables () {
     export IP_ADDRESS="$(get_var "ip_address")"
     export SECRET_KEY="$(sudo openssl rand -hex 64)"
-    export DATABASE_NAME="$(get_var "database_name")"
-    export DATABASE_USER="$(get_var "database_user")"
-    export DATABASE_PASSWORD="$(get_var "database_password")"
+    export NAME="$(get_var "database_name")"
+    export USER="$(get_var "database_user")"
+    export PASSWORD="$(get_var "database_password")"
     export HOST="$(get_var "host")"
     export PORT="$(get_var "port")"
     export APPLICATION_HOST="$(get_var "application_host")"
