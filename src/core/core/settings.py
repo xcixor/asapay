@@ -127,5 +127,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_DIR = BASE_DIR[:-4]
-STATIC_ROOT = os.path.join(BASE_DIR, 'core/staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'core/staticfiles')
+STATIC_ROOT=os.environ.get('STATIC_ROOT')
 STATICFILES_STORAGE = 'django_forgiving_collectstatic.storages.ForgivingManifestStaticFilesStorage'
