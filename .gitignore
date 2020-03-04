@@ -2,6 +2,7 @@
 *__pycache__*
 .env
 *.sql*
+*.txt*
 settings.json
 *variables.json*
 *account.json*
@@ -9,3 +10,4 @@ settings.json
 *.terraform*
 *infrastructure*
 *staticfiles*
+*.gz*
