@@ -18,6 +18,7 @@ get_required_variables () {
     export DATABASE_USER="$(get_var "database_user")"
     export DATABASE_PASSWORD="$(get_var "database_password")"
     export HOST="$(get_var "host")"
+    export PORT="$(get_var "port")"
     export APPLICATION_HOST="$(get_var "application_host")"
     export GITHUB_BRANCH="$(get_var "github_branch")"
     export NGINX_SERVER_NAME="${APPLICATION_HOST}"
