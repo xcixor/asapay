@@ -8,3 +8,4 @@ settings.json
 *terraform.tfvars*
 *.terraform*
 *infrastructure*
+*staticfiles*
